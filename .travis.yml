@@ -123,5 +123,8 @@ script:
   # Constraint set servant-0.13
   - if [ $HCNUMVER -ge 70800 ] && [ $HCNUMVER -lt 80400 ]; then cabal new-build -w ${HC} --disable-tests --disable-benchmarks --constraint='servant ==0.13.*' all; else echo skipping...; fi
 
+  # Constraint set servant-0.14
+  - if [ $HCNUMVER -ge 70800 ] && [ $HCNUMVER -lt 80400 ]; then cabal new-build -w ${HC} --disable-tests --disable-benchmarks --constraint='servant ==0.14.*' all; else echo skipping...; fi
+
 # REGENDATA ["--branch","master","--output",".travis.yml","--config","servant-js.cabal"]
 # EOF
